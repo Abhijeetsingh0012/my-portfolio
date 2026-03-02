@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Abhijeet Singh - Web Developer Portfolio showcasing projects built with HTML, CSS, JavaScript and React.">
+
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Abhijeet Singh</div>
+            <ul class="nav" id="navMenu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Images/Abhijeet_Singh_CV.pdf" download class="download-btn">Download CV</a></li>
+            </ul>
+
+            <div class="toggle" id="toggleBtn">☰</div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-left">
+                <h1>Hi, I'm Abhijeet Singh</h1>
+                <p>A passionate Web Developer</p>
+            </div>
+            <div class="hero-right">
+                <img src="Images/Abhijeet.jpg" alt="Abhijeet Singh Profile Picture" class="profile-img">
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate Web Developer with a strong foundation in modern web technologies.
+                I specialize in building responsive and interactive user interfaces using HTML, CSS, and JavaScript.
+                <br>
+                I have experience working with React.js to build single-page applications (SPAs),
+                and I am comfortable with components, hooks, state management, and routing.
+                <br>
+                I enjoy turning ideas into real-world web applications that are clean, efficient, and user-friendly.
+            </p>
+
+            <div class="about-skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">PHP</span>
+                <span class="skill">MySQL</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <img src="Images/Colloge Project.jpeg" alt="Project 1 Image">
+                    <h3>Future University Digital Librery</h3>
+                    <p> Designed and developed a responsive digital library for collage students
+                        to access semester-wise study materials and previous year question papers.
+                        Implemented department,year, and semester-based filtering system for organized content
+                        navigation.
+                        Build using HTML, CSS, JavaScript, and PHP to provide structured academic resource access.
+                    </p>
+                    <div class="card-buttons">
+                        <a href="collage-project.html">View Project</a>
+                        <a href="#">Live</a>
+                    </div>
+                    <br>
+                    <P>Available = 10000Rs</P>
+                </div>
+
+                <div class="project-card">
+                    <img src="Images/Register Page.png" alt="Project 2 Image">
+                    <h3>User Authentication System</h3>
+                    <p>Developed a secure user Authentication System using HTML, CSS, JavaScript, Php, and Mysql.
+                        The system allow users to register, login , and manage sessions scurely. Implemented from
+                        validation
+                        on both client-side (JavaScript) and server-side (PHP) to ensure data integrity. Designed
+                        responsive
+                        UI and structured database for storing user credentials.
+                    </p>
+
+                    <div class="card-buttons">
+                        <a href="login-project.html">View Project</a>
+                        <a href="http://abhiregister.page.gd" target="_blank">Live</a>
+                    </div>
+                    <br>
+                    <P>Available = 1000Rs</P>
+                </div>
+
+                <div class="project-card">
+                    <img src="Images/gymimg.jpg" alt="Project 3 Image">
+                    <h3>Gym Landing Page by Bootstrap</h3>
+                    <p>I have developed a modern, fully responsive Gym Landing Page using Bootstrap 5. The goal of this
+                        project was to create a high-conversion front-end page that looks great on all devices, from
+                        mobile phones to desktops. It features a bold design, clear call-to-action buttons, and
+                        organized sections for services and membership plans."</p>
+
+                    <div class="card-buttons">
+                        <a href="gym-page.html">View Project</a>
+                        <a href="#">Live</a>
+                    </div>
+                    <br>
+                    <P>Available = 2000Rs</P>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="contact-h">Contact</h2>
+            <div class="contact-container">
+
+                <div class="contact-info">
+                    <h2 >Get In Touch</h2>
+                    <p class="info-p">I'm always open to discussing new projects, creative ideas or opportunities to be
+                        part of your
+                        visions.</p>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>@example.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Budaun, Uttar Pradesh, India</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/yourprofile</span>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form id="contactform" action="" method="POST">
+                        <input type="text" name="name" id="name" placeholder="Full Name" required>
+                        <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" id="submitBtn" class="btn">Send Message</button>
+                        <p id="error-msg" style="color: red; display: none;"></p>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Abhijeet Singh. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System Project</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .features {
+            padding-left: 18px;
+        }
+
+        .features li {
+            margin-bottom: 6px;
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech span {
+            background: #e8f0ff;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .images img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 26px;
+            margin: 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn.live {
+            background: #28a745;
+        }
+
+        /* ===== Tablet ===== */
+        @media (max-width:900px) {
+            .images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===== Mobile ===== */
+        @media (max-width:600px) {
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .images {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Gym Landing Pgae By Bootstrap </h1>
+        <p class="subtitle">Creaye by Bootstrap Class that make more responsive & Mobile friendly.</p>
+
+        <div class="card">
+            <h2>Project Overview</h2>
+            <p>
+                This project is give usre mobile friendly website. In this user esaly contact to gym owner and
+                give details by contact form and Also check the fee structure of the gym & facilities provided by the
+                gym.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Features</h2>
+            <ul class="features">
+                <li>User Friendly</li>
+                <li>Bootstrap Class</li>
+                 <li>Responsive Navbar</li>
+                <li>Services Card</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Technologies Used</h2>
+            <div class="tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Project Screenshots</h2>
+            <div class="images">
+                <img src="images/login.png" alt="Login Page">
+                <img src="images/register.png" alt="Register Page">
+                <img src="images/dashboard.png" alt="Dashboard">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="https://your-live-link.com" target="_blank" class="btn live">Live Project</a>
+            <a href="index.html" class="btn">Back to Portfolio</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

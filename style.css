@@ -1,0 +1,481 @@
+/* Color Palette */
+:root {
+    --bg-color: #59b6bd;
+    --primary-color: #2fc7cc;
+    --secondary-color: #050000;
+    --accent-color: #FF5722;
+    --text-color: #fffcfc;
+}
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000000, #0f2027);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(53, 151, 207, 0.3);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    /* ::after element ko position karne ke liye */
+    transition: color 0.3s ease;
+}
+
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    /* Link se neeche position set */
+    left: 0;
+    width: 0;
+    /* Shuruat mein width zero rahegi */
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* toggle hidden desktop */
+.toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Mobile Screens ke liye styling */
+@media (max-width: 768px) {
+    .toggle {
+        display: block;
+        /* Mobile par burger icon dikhega */
+    }
+
+    nav ul {
+        display: none;
+        /* Default mein menu band rahega */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        /* Header ke thik niche */
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        /* Dark background for visibility */
+        backdrop-filter: blur(10px);
+        padding: 2rem 0;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    /* Jab menu open ho (Active class) */
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 1.5rem 0;
+        /* Links ke beech gap */
+        margin-left: 0;
+        /* Desktop wala margin hatane ke liye */
+    }
+}
+
+.download-btn {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+
+.download-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: 0.2s ease;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+section {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Hero Section */
+#hero {
+    height: 80vh;
+    padding: 2rem;
+    display: flex;
+    /* Flexbox ka istemal */
+    flex-direction: row;
+    /* Content left to right aayega */
+    justify-content: space-around;
+    /* Dono sides mein space */
+    align-items: center;
+    /* Vertically center align karein */
+    background-color: var(--bg-color);
+    /* Background black rakhein */
+}
+
+.hero-left {
+    text-align: left;
+    max-width: 50%;
+}
+
+.hero-left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.hero-left p {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+
+}
+
+.hero-right {
+    text-align: right;
+    max-width: 40%;
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 0 10px 8px rgba(8, 8, 8, 0.6);
+    object-fit: cover;
+    object-position: center;
+}
+
+/*About */
+
+.about-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    border-radius: 18px;
+    box-shadow: 0 10px 40px rgba(5, 214, 221, 0.925);
+    color: #e2e8f0;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.about-skills {
+    margin-top: 25px;
+}
+
+.skill {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 6px;
+    border-radius: 20px;
+    background: #22c55e;
+    color: #000;
+    font-weight: 500;
+}
+
+/* Responsive design ke liye */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        min-height: 100vh;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        /* About section se gap */
+    }
+
+    .hero-left,
+    .hero-right {
+        max-width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+        /* Mobile par text center karne ke liye */
+    }
+
+    .hero-left h1 {
+        font-size: 2rem;
+        /* Mobile par heading  */
+    }
+}
+
+/* Project Cards Section */
+#projects {
+    background-color: black;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 254, 254, 0.6);
+
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(16, 122, 209, 0.4);
+}
+
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: fill;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.card-buttons a {
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #000000;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #01d825;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+}
+
+
+/* Container jo dono ko side-by-side rakhega */
+#contact .contact-h{
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: var(--primary-color);
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0 10px 40px rgba(5, 214, 221, 0.925);
+}
+
+/* Left side styling */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.contact-info h2{
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+.contact-info .info-p{
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 1.1rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-right: 15px;
+}
+
+/* Right side (Form) styling */
+.contact-form-wrapper {
+    flex: 1;
+    min-width: 300px;
+}
+
+#contactform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactform input,
+#contactform textarea {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #f8f9fa;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+#contactform input:focus,
+#contactform textarea:focus {
+    border-color: var(--primary-color);
+    background: #fff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        /* Mobile par ek ke niche ek */
+        padding: 20px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Scroll Reveal Animation */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Active Navbar Link */
+
+nav ul li a.active {
+    color: var(--primary-color);
+}
