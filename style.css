@@ -90,43 +90,6 @@ nav ul li a:hover::after {
     color: var(--primary-color);
 }
 
-/* Mobile Screens ke liye styling */
-@media (max-width: 768px) {
-    .toggle {
-        display: block;
-        /* Mobile par burger icon dikhega */
-    }
-
-    nav ul {
-        display: none;
-        /* Default mein menu band rahega */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        /* Header ke thik niche */
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        /* Dark background for visibility */
-        backdrop-filter: blur(10px);
-        padding: 2rem 0;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
-
-    /* Jab menu open ho (Active class) */
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 1.5rem 0;
-        /* Links ke beech gap */
-        margin-left: 0;
-        /* Desktop wala margin hatane ke liye */
-    }
-}
-
 .download-btn {
     padding: 0.5rem 1rem;
     font-weight: bold;
@@ -240,32 +203,6 @@ h3 {
     background: #22c55e;
     color: #000;
     font-weight: 500;
-}
-
-/* Responsive design ke liye */
-@media (max-width: 768px) {
-    #hero {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        min-height: 100vh;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        /* About section se gap */
-    }
-
-    .hero-left,
-    .hero-right {
-        max-width: 100%;
-        margin-bottom: 2rem;
-        text-align: center;
-        /* Mobile par text center karne ke liye */
-    }
-
-    .hero-left h1 {
-        font-size: 2rem;
-        /* Mobile par heading  */
-    }
 }
 
 /* Project Cards Section */
@@ -426,15 +363,6 @@ h3 {
     background: #fff;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        /* Mobile par ek ke niche ek */
-        padding: 20px;
-    }
-}
-
 /* Footer */
 footer {
     background-color: #1a1a1a;
@@ -443,23 +371,6 @@ footer {
     color: var(--text-color);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
-    .project-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 /* Scroll Reveal Animation */
 
@@ -478,4 +389,113 @@ footer {
 
 nav ul li a.active {
     color: var(--primary-color);
+
+}
+
+/* Responsive design ke liye */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 20px 50px 20px;
+        gap: 20px;
+        overflow: hidden;
+    }
+
+    .hero-left {
+        max-width: 100%;
+        text-align: center;
+        order: 2;
+    }
+
+    .hero-left h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-left p {
+        font-size: 1.1rem;
+    }
+
+    .hero-right {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .profile-img {
+        width: 220px;
+        height: 220px;
+        max-width: 70vw;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        /* Mobile par ek ke niche ek */
+        padding: 15px;
+        margin: 10px;
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        min-height: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toggle {
+        display: block;
+        /* Mobile par burger icon dikhega */
+    }
+
+    nav ul {
+        display: none;
+        /* Default mein menu band rahega */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        /* Header ke thik niche */
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        /* Dark background for visibility */
+        backdrop-filter: blur(10px);
+        padding: 2rem 0;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    /* Jab menu open ho (Active class) */
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 1.5rem 0;
+        /* Links ke beech gap */
+        margin-left: 0;
+        /* Desktop wala margin hatane ke liye */
+    }
 }
