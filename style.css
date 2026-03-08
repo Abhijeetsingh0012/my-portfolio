@@ -438,16 +438,26 @@ nav ul li a.active {
     .contact-container {
         flex-direction: column;
         /* Mobile par ek ke niche ek */
-        padding: 15px;
-        margin: 10px;
-        width: 100%;
-        box-sizing: border-box;
+        padding: 0;
+       gap: 40px;
 
     }
 
-    .contact-info,
-    .contact-form-wrapper {
-        min-height: 100%;
+    .contact-info {
+    text-align:center;
+    }
+
+    #contactform{
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    #contactform input,
+    #contactform textarea {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
     }
 
     nav ul {
@@ -499,3 +509,4 @@ nav ul li a.active {
         /* Desktop wala margin hatane ke liye */
     }
 }
+
